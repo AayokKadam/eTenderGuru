@@ -41,7 +41,7 @@ export default function GemPortalSection() {
             {/* Main GeM Logo */}
             <div className="gem-logo-box">
               <img
-                src="../../public/gem3.png"
+                src="/gem3.png"
                 alt="Government eMarketplace"
                 className="gem-logo1"
               />

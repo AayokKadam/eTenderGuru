@@ -128,7 +128,7 @@ export const Footer = () => {
               </a>
             </div>
           </div>
-          {/* Small Bottom-Right Image */} <div className="footer-bottom-right-image"> <img src="../../public/gem1.jpg" alt="GeM" /> </div>
+          {/* Small Bottom-Right Image */} <div className="footer-bottom-right-image"> <img src="/gem1.jpg" alt="GeM" /> </div>
 
         </div>
       </footer>

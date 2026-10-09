@@ -21,7 +21,7 @@ export default function GemAdBanner() {
         }}
       >
         <img
-          src="../../public/banner.png"
+          src="/banner.png"
           alt="GeM Government eMarketplace"
           style={{
             width: "100%",

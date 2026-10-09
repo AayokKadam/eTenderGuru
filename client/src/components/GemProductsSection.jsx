@@ -75,7 +75,7 @@ export default function GemProductsSection() {
           <div className="gem-products-bottom-image">
 
             <img
-              src="../../public/image5.png"
+              src="/image5.png"
               alt="Products available on GeM"
             />
 
