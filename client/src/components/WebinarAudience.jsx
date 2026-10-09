@@ -1,4 +1,3 @@
-import React from "react";
 import { useLanguage } from "../context/LanguageContext";
 import { translations } from "../data/translations";
 
@@ -32,21 +31,29 @@ export default function WebinarAudience() {
             </h2>
           </div>
 
-          <p className="webinar-audience-intro">
-               <img
-  src="../../public/gem_logo-removebg-preview.png"
-  alt="Government e-Marketplace"
-  className="gem-logo"
-/>
-            {section.subtitle}
-          </p>
+            <div className="webinar-audience-intro-wrap">
+              <p className="webinar-audience-intro">
+                <img
+                  src="/gem_logo-removebg-preview.png"
+                  alt="Government e-Marketplace"
+                  className="gem-logo"
+                />
+                {section.subtitle}
+              </p>
+            </div>
 
-          
+          </div>
 
-        </div>
+          <div className="webinar-audience-image-wrap">
+            <img
+              src="/Threeenginner.png"
+              alt="Civil, electrical, and technical professionals"
+              className="webinar-audience-image"
+            />
+          </div>
 
-        {/* Compact Table */}
-        <div className="webinar-audience-table">
+          {/* Compact Table */}
+          <div className="webinar-audience-table">
 
           {section.audiences.map((audience, index) => (
             <article

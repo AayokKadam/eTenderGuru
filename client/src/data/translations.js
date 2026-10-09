@@ -18,6 +18,9 @@ export const translations = {
       stepIndicator: "01 / 03",
       altFounder: "eTender Guru Founder - Government Tender Trainer & Expert",
       altReference: "eTender Guru Hero Reference",
+      priceText: "Start At Only",
+      priceValue: "4999",
+      priceSymbol: "₹",
     },
 
     // Webinar Audience Section
@@ -509,7 +512,7 @@ export const translations = {
 webinarLearn: {
   title: "What will you learn from this webinar?",
   partLabel: "Part",
-  registerText: "REGISTER NOW FOR RS. 9999/-",
+  registerText: "REGISTER NOW FOR RS. 4999/-",
   taxText: "(EXCLUDING ALL TAXES)",
   items: [
     { id: 1, points: ["What is a tender", "Types of tenders"] },
@@ -576,10 +579,15 @@ webinarLearn: {
     // Hero Section (Strictly following herosection-design.md in Marathi)
     hero: {
       label: "शासकीय निविदा शिक्षण सुलभ आणि सोपे",
-      headlineBold: "समजून घ्या",
-      headlineLight: "निविदा.",
-      supportingText:
-        "प्रत्यक्ष अनुभवातून मिळालेले व्यावसायिक शासकीय निविदांचे परिपूर्ण शिक्षण.",
+      headlineLines: [
+        "बेरोजगारांना संधी,",
+        "स्वावलंबनाची नवी",
+        "दिशा!",
+      ],
+      priceText: "आता फक्त",
+      priceValue: "4999",
+      priceSymbol: "₹",
+      supportingText: "प्रत्यक्ष अनुभवातून मिळणारे व्यावहारिक टेंडर प्रशिक्षण.",
       cta: "कोर्सेस पहा",
       annotation: "आजचे ज्ञान • उद्याच्या संधी",
       stepIndicator: "०१ / ०३",
@@ -632,7 +640,7 @@ webinarLearn: {
     webinarLearn: {
   title: "या वेबिनारमधून तुम्हाला काय शिकायला मिळेल?",
   partLabel: "भाग",
-  registerText: "आत्ताच नोंदणी करा फक्त ₹ 5000/-",
+  registerText: "आत्ताच नोंदणी करा फक्त ₹ 4999/-",
   taxText: "(सर्व करांशिवाय)",
   items: [
     { id: 1, points: ["टेंडर म्हणजे काय", "टेंडरचे प्रकार"] },

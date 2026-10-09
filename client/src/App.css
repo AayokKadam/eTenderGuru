@@ -93,6 +93,18 @@
   overflow: hidden; /* Founder is completely contained inside the hero banner */
 }
 
+.hero-image-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
 .hero-inner-container {
   width: 100%;
   max-width: 1120px; /* Brings left content and founder into a cohesive, balanced relationship */
@@ -114,6 +126,10 @@
   max-width: 530px;
   padding: 56px 0 24px;
   margin-top: 16px;
+}
+
+.hero-content-col-marathi {
+  max-width: 640px;
 }
 
 .hero-eyebrow-wrap {
@@ -158,14 +174,209 @@
   margin-top: 2px;
 }
 
+.hero-headline-serif.hero-headline-marathi {
+  font-size: clamp(3.1rem, 5.2vw, 4.3rem);
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.hero-headline-impact.hero-headline-marathi {
+  font-size: clamp(3rem, 5vw, 4.1rem);
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.hero-price-glow {
+  color: #17324d !important;
+  font-weight: 800;
+  text-shadow: 0 2px 8px rgba(23, 50, 77, 0.18);
+  -webkit-text-stroke: 0;
+  letter-spacing: 0;
+  line-height: 1.15;
+}
+
+.hero-price-currency {
+  margin-left: 0.1em;
+  color: #17324d !important;
+  font-weight: 800;
+  text-shadow: 0 2px 8px rgba(23, 50, 77, 0.18);
+  -webkit-text-stroke: 0;
+}
+
+.hero-price-suffix {
+  margin-left: 0.12em;
+}
+
+.hero-price-banner {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  margin: 12px 0 22px;
+}
+
+.hero-price-label {
+  font-family: var(--font-body);
+  font-size: clamp(1.2rem, 1.9vw, 1.9rem);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.45);
+  animation: heroPriceLabelEntrance 0.55s cubic-bezier(0.16, 1, 0.3, 1) 0.72s backwards;
+  will-change: transform, opacity;
+}
+
+.hero-price-value {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0;
+  font-family: var(--font-impact);
+  font-size: clamp(2.5rem, 5.5vw, 4.6rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  animation: heroPriceValueEntrance 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.88s backwards;
+  transform-origin: left center;
+  will-change: transform, opacity;
+}
+
+.hero-price-value > span {
+  color: #ffffff;
+  background: none;
+  -webkit-text-fill-color: #ffffff;
+  -webkit-text-stroke: 1.5px #000000;
+  text-shadow: none;
+}
+
+.hero-price-value .hero-price-currency {
+  margin-left: 0;
+  color: #ffffff !important;
+  font: inherit;
+  -webkit-text-stroke: 1.5px #000000;
+  -webkit-text-fill-color: #ffffff;
+  text-shadow: none;
+}
+
+@keyframes heroPriceLabelEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroPriceValueEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.88);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .hero-price-banner {
+    gap: 0.3em;
+    margin: 10px 0 18px;
+  }
+
+  .hero-price-label {
+    font-size: 1.1rem;
+  }
+
+  .hero-price-value {
+    font-size: clamp(2.2rem, 9vw, 3.2rem);
+  }
+}
+
+@keyframes heroMarathiCaptionEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .hero-editorial-subtext {
   font-family: var(--font-body);
-  font-size: 1.12rem;
-  font-weight: 400;
-  line-height: 1.52;
-  color: rgba(255, 255, 255, 0.92);
-  max-width: 440px;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.65;
+  color: #FFFFFF;
+
+  max-width: 480px;
   margin-bottom: 30px;
+
+
+}
+
+.hero-marathi-content {
+  width: min(100%, 620px);
+}
+
+.hero-editorial-heading-marathi {
+  margin: 0 0 14px;
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: clamp(2.5rem, 4.2vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.13;
+  letter-spacing: 0;
+  text-shadow: 0 2px 10px rgba(20, 31, 49, 0.28);
+  animation: heroMarathiHeadlineEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s backwards;
+  will-change: transform, opacity;
+}
+
+.hero-marathi-headline-line {
+  display: block;
+}
+
+.hero-price-banner-marathi {
+  gap: 0.3em;
+  margin: 0 0 10px;
+}
+
+.hero-price-banner-marathi .hero-price-label {
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+  text-shadow: 0 2px 8px rgba(20, 31, 49, 0.28);
+}
+
+.hero-price-banner-marathi .hero-price-value {
+  font-family: var(--font-body);
+  font-size: clamp(2.6rem, 4.6vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.hero-price-banner-marathi .hero-price-value > span {
+  -webkit-text-stroke: 0;
+}
+
+.hero-price-banner-marathi .hero-price-value > .hero-price-digits {
+  -webkit-text-stroke: 2px #000000;
+  paint-order: stroke fill;
+}
+
+.hero-marathi-caption {
+  margin: 0;
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.5vw, 1.3rem);
+  font-weight: 600;
+  line-height: 1.5;
+  text-shadow: 0 2px 8px rgba(20, 31, 49, 0.24);
+  animation: heroMarathiCaptionEntrance 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.48s backwards;
+  will-change: transform, opacity;
 }
 
 /* Tactile, Refined CTA Button */
@@ -241,16 +452,19 @@
 .hero-editorial-wordmark {
   position: absolute;
   top: 36%;
-  left: 65%;
+  left: 70%;
   transform: translate(-50%, -50%);
   width: max-content;
+
   font-family: var(--font-serif);
-  font-size: clamp(4.5rem, 9.8vw, 10.2rem);
+  font-size: clamp(3rem, 6.5vw, 7rem);
   font-weight: 400;
   line-height: 1;
   letter-spacing: -0.015em;
+
   color: transparent;
   -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.45);
+
   white-space: nowrap;
   pointer-events: none;
   user-select: none;
@@ -389,6 +603,17 @@
   }
 }
 
+@keyframes heroMarathiHeadlineEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes heroEyebrowEntrance {
   0% {
     opacity: 0;
@@ -493,9 +718,18 @@
   .hero-eyebrow-wrap,
   .hero-headline-serif,
   .hero-headline-impact,
+  .hero-editorial-heading-marathi,
   .hero-editorial-subtext,
+  .hero-price-label,
+  .hero-price-value,
   .hero-cta-wrap,
   .lang-toggle-wrapper {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .hero-marathi-caption {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
@@ -3977,6 +4211,31 @@
     margin-top: 0;
     flex: 0 0 auto;
   }
+  .hero-content-col-marathi {
+    width: min(100%, 700px);
+    padding-top: 56px;
+    padding-bottom: 20px;
+  }
+  .hero-marathi-content {
+    width: min(100%, 620px);
+    text-align: center;
+  }
+  .hero-editorial-heading-marathi {
+    font-size: clamp(1.8rem, 4.5vw, 2.7rem);
+    margin-bottom: 12px;
+  }
+  .hero-price-banner-marathi {
+    justify-content: center;
+  }
+  .hero-price-banner-marathi .hero-price-label {
+    font-size: clamp(1.15rem, 3.5vw, 1.5rem);
+  }
+  .hero-price-banner-marathi .hero-price-value {
+    font-size: clamp(2.3rem, 6vw, 3.4rem);
+  }
+  .hero-marathi-caption {
+    font-size: clamp(0.95rem, 3.8vw, 1.2rem);
+  }
   .hero-eyebrow-wrap {
     display: flex;
     justify-content: center;
@@ -3999,6 +4258,12 @@
   .hero-headline-impact {
     font-size: 3rem;
     text-align: center;
+  }
+  .hero-headline-serif.hero-headline-marathi {
+    font-size: 2.35rem;
+  }
+  .hero-headline-impact.hero-headline-marathi {
+    font-size: 2.45rem;
   }
   .hero-editorial-subtext {
     text-align: center;
@@ -5958,6 +6223,12 @@
   .hero-headline-impact {
     font-size: 2.5rem;
   }
+  .hero-headline-serif.hero-headline-marathi {
+    font-size: 2rem;
+  }
+  .hero-headline-impact.hero-headline-marathi {
+    font-size: 2.2rem;
+  }
   .hero-editorial-subtext {
     font-size: 0.88rem;
     line-height: 1.45;
@@ -6431,6 +6702,7 @@
 }
 
 .webinar-audience-intro {
+  flex: 1 1 300px;
   max-width: 350px;
   margin: 0;
   color: #52627a;
@@ -6438,11 +6710,35 @@
   line-height: 1.5;
 }
 
+.webinar-audience-intro-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 24px;
+  flex: 0 1 650px;
+}
+
+.webinar-audience-image-wrap {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  margin: -10px auto -105px;
+}
+
+.webinar-audience-image {
+  display: block;
+  width: min(460px, 62%);
+  height: auto;
+}
+
 /* =========================
    TABLE / GRID
 ========================= */
 
 .webinar-audience-table {
+  position: relative;
+  z-index: 2;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
@@ -6561,6 +6857,24 @@
     gap: 15px;
   }
 
+  .webinar-audience-intro-wrap {
+    width: 100%;
+    max-width: 650px;
+    justify-content: space-between;
+    flex: 0 1 auto;
+  }
+
+  .webinar-audience-image-wrap {
+    margin: 0 auto -64px;
+  }
+
+  .webinar-audience-image {
+    width: min(420px, 72%);
+  }
+
+}
+
+@media (max-width: 640px) {
   .webinar-audience-table {
     grid-template-columns: 1fr;
   }
@@ -6569,6 +6883,18 @@
 @media (max-width: 500px) {
   .webinar-audience {
     padding: 50px 0;
+  }
+
+  .webinar-audience-intro-wrap {
+    gap: 12px;
+  }
+
+  .webinar-audience-image {
+    width: min(360px, 92%);
+  }
+
+  .webinar-audience-image-wrap {
+    margin-bottom: -28px;
   }
 
   .webinar-audience-title span {
@@ -7833,10 +8159,21 @@
   margin: 0 0 8px -14px; /* negative left margin = moves the logo left; change -14px to taste */
 }
 
+.hero-gem-logo-right {
+  position: absolute;
+  top: clamp(16px, 2.8vh, 28px);
+  right: calc(clamp(150px, 16vw, 190px) - 60px);
+  z-index: 25;
+  margin: 0;
+  transform: none;
+  
+}
+
 .hero-gem-logo {
   display: block;
   width: clamp(200px, 20vw, 300px);
   height: auto;
+ 
 }
 
 /* ---- Ashoka emblem in white ----
@@ -7867,7 +8204,12 @@
 
 @media (max-width: 768px) {
   .hero-gem-logo {
-    width: clamp(160px, 46vw, 220px);
+    width: clamp(150px, 36vw, 220px);
+  }
+
+  .hero-gem-logo-right {
+    top: 18px;
+    right: 40px;
   }
 
   .hero-eyebrow-mobile {
@@ -8181,4 +8523,3 @@
     height: 52px;
   }
 }
-

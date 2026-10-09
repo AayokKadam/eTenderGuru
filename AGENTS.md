@@ -1,8 +1,8 @@
 # Project Guidelines & Agent Instructions
 
 ## Primary Working Directory Rule
-- **Active Codebase**: All subsequent modifications, component enhancements, style adjustments, and code changes MUST be made exclusively in the **`clientcopy/`** directory.
-- **Protected Directory**: Do **NOT** modify or alter any files inside the original **`client/`** directory.
+- **Active Codebase**: All subsequent modifications, component enhancements, style adjustments, and code changes MUST be made exclusively in the **`client/`** directory.
+- **Protected Directory**: Do **NOT** modify or alter any files inside the original **`clientcopy/`** directory.
 
 ---
 

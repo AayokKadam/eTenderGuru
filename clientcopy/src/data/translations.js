@@ -281,12 +281,12 @@ export const translations = {
 
     // Hero Section (Natural eTender Guru Style)
     hero: {
-      label: "GOVERNMENT TENDERS आता सोप्या भाषेत",
-      headlineBold: "टेंडर",
-      headlineLight: "शिका.",
-      supportingText: "प्रत्यक्ष ग्राऊंड अनुभवातून Government Tender चे सोपे आणि प्रॅक्टिकल शिक्षण.",
-      cta: "COURSES पहा",
-      annotation: "आज शिका • उद्या स्वतःचा Business सुरू करा",
+      label: "सरकारी टेंडर आता सोप्या भाषेत",
+      headlineBold: "सरकारी खरेदी समजून घ्या",
+      headlineLight: "व्यवसायात पुढे चला!",
+      supportingText: "प्रत्येक अटी, पात्रता आणि टेंडर प्रक्रिया समजून घेऊन प्रॅक्टिकल मार्गदर्शन मिळवा.",
+      cta: "कोर्स पहा",
+      annotation: "आज शिकून • उद्या व्यवसाय वाढवा",
       stepIndicator: "०१ / ०३",
       altFounder: "eTender Guru संस्थापक - Tender Trainer & Expert",
       altReference: "eTender Guru Hero Reference"

@@ -22,6 +22,13 @@ export const HeroSection = ({ onExploreCourses }) => {
         </div>
 
         <img
+          src="/gem-tender-process.png"
+          alt=""
+          className="hero-process-overlay"
+          aria-hidden="true"
+        />
+
+        <img
           src="/gem_logo-removebg-preview.png"
           alt="Government e-Marketplace"
           className="hero-gem-logo"

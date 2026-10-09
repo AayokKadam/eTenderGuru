@@ -128,6 +128,20 @@
   pointer-events: none;
 }
 
+.hero-process-overlay {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  bottom: 2%;
+  width: min(64vw, 900px);
+  max-height: 88%;
+  object-fit: contain;
+  object-position: right center;
+  opacity: 0.24;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
 .hero-gem-logo {
   position: absolute;
   top: 26px;
@@ -333,6 +347,14 @@
     height: 90dvh;
     min-height: 520px;
     padding: 0;
+  }
+
+  .hero-process-overlay {
+    right: -16%;
+    bottom: 0;
+    width: 112%;
+    max-height: 52%;
+    opacity: 0.14;
   }
 
   .hero-content-col {
